@@ -1,13 +1,12 @@
-name: 'Wait'
-description: 'Wait a designated number of milliseconds'
+name: 'Git URL Parse'
+description: 'parse git url as an json object'
 inputs:
-  milliseconds:  # id of input
-    description: 'number of milliseconds to wait'
+  url:  # id of input
+    description: 'git url as any format'
     required: true
-    default: '1000'
 outputs:
-  time: # output will be available to future steps 
-    description: 'The message to output'
+  result: # output will be available to future steps 
+    description: 'The git url object'
 runs:
   using: 'node12'
   main: 'dist/index.js'
